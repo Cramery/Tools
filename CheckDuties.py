@@ -5,7 +5,7 @@ from datetime import date, datetime, timedelta
 endpoint = "https://api.float.com"
 headers = {"Authorization": "Bearer 26df3bf128afcba2TolQQgadAEbqrEZ0xnxePuU9hBBgY6v7AGL0BDeEnzs"}
 
-#Datum eingeben
+#Enter date
 startdate = date(2020, 2, 26)
 enddate = date(2020, 2, 29)
 
