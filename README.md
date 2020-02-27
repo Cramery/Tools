@@ -1,7 +1,7 @@
 # Tools
 Random Tools, Skripts and Stuff I coded. Most of them bc I'm a lazy shithead.
 
-##Check Duties:##
+## Check Duties: ##
 
 Get Data from Float-Planning tool. Check how many Duties from each type are planned at a specific date. Inform over Slack if Duties are missing
 
