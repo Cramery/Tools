@@ -26,6 +26,7 @@ for i in range(0,days):
     r = requests.get(request, headers=headers) 
 
     parsed_json = (json.loads(r.text))
+    print(parsed_json)
 
     #Only interested in the names
     names = []
@@ -63,7 +64,7 @@ for i in range(0,days):
 
     #Send alert to Slack, when duty is missing
     if(msg != ""):
-        web_hook_url = "https://hooks.slack.com/services/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"
+        web_hook_url = "https://hooks.slack.com/services/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"
 
         slack_msg = {'text':msg}
 
