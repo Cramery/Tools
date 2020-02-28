@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegEx Converter</title>
+
+	
+  </head>
+  <body>
+	<h1> RegEx Converter </h1>
+	Insert to Convert: <br /> <input type="text" name="input" size="80%" id="input"><br>
+	<button type="button" onclick="convert()">Convert</button>
+	<p id="output"></p>
+	
+	<script>
+		function convert(){
+			var regEx = document.getElementById("input").value;
+			regEx = regEx.replace(/\\/g, "\\" + "\\");
+			regEx = regEx.replace(/\s/g, "\\s");
+			regEx = regEx.replace(/\\s\\s/g, "\\s+")
+			while(regEx.includes("\\s+\\s+")){	
+				regEx = regEx.replace("\\s+\\s+", "\\s+")
+			}
+			while(regEx.includes("\\s+\\s")){	
+				regEx = regEx.replace("\\s+\\s", "\\s+")
+			}
+			regEx = regEx.replace(/\./g, "\\.");
+			regEx = regEx.replace(/\?/g, "\\?");
+			regEx = regEx.replace(/\!/g, "\\!");
+			regEx = regEx.replace(/\"/g, '\\"');
+			regEx = regEx.replace(/\:/g, "\\:");
+			regEx = regEx.replace(/\$/g, "\\$");
+			regEx = regEx.replace(/\+/g, "\\+");
+			regEx = regEx.replace(/\=/g, "\\=");
+			regEx = regEx.replace(/\-/g, "\\-");
+			regEx = regEx.replace(/\*/g, "\\*");
+			
+			regEx = regEx.replace(/\[/g, "\\[");
+			regEx = regEx.replace(/\]/g, "\\]");
+			regEx = regEx.replace(/\(/g, "\\(");
+			regEx = regEx.replace(/\)/g, "\\)");
+			regEx = regEx.replace(/\{/g, "\\{");
+			regEx = regEx.replace(/\}/g, "\\}");
+			regEx = regEx.replace(/\|/g, "\\|");
+			
+			regEx = regEx.replace(/\^/g, "\\^");
+			document.getElementById("output").innerHTML = regEx;
+		}
+	</script>
+  </body>
+</html>
