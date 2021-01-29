@@ -12,7 +12,7 @@ class Task:
 
 
 endpoint = "https://api.float.com"
-headers = {"Authorization": "Bearer "}
+headers = {"Authorization": "Bearer /"}
 
 #++Globals
 #Enter date
@@ -74,7 +74,7 @@ for i in range(0,days):
     #--Check people with no tasks at that day
 
     #++Ifs *hust* AI to decide who gets Duty :3
-
+    #Für die letzten paar wochen schauen, wer wie oft bereits diese Duty schicht hatte & in Bewertung einfliessen lassen
 
     #--Ifs *hust* AI to decide who gets Duty :3
 
@@ -84,7 +84,7 @@ for i in range(0,days):
     #Send alert to Slack, when duty is missing
     if(msg != ""):
         print(msg)
-        web_hook_url = "https://hooks.slack.com/services/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"
+        web_hook_url = "https://hooks.slack.com/services/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"
 
         slack_msg = {'text':msg}
 

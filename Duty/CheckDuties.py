@@ -13,7 +13,7 @@ class Task:
 
 #++Globals
 endpoint = "https://api.float.com"
-headers = {"Authorization": "Bearer "}
+headers = {"Authorization": "Bearer"}
 
 #Enter date
 startdate = date(2020, 3, 2)
@@ -80,7 +80,7 @@ for i in range(0,days):
     #Send alert to Slack, when duty is missing
     if(msg != ""):
         
-        web_hook_url = "https://hooks.slack.com/services/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"
+        web_hook_url = "https://hooks.slack.com/services/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"
 
         slack_msg = {'text':msg}
 

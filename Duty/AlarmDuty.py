@@ -16,7 +16,7 @@ class People:
 
 
 endpoint = "https://api.float.com"
-headers = {"Authorization": "Bearer 26df3bf128afcba2TolQQgadAEbqrEZ0xnxePuU9hBBgY6v7AGL0BDeEnzs"}
+headers = {"Authorization": ""}
 
 #++Globals
 #Enter date
@@ -80,7 +80,7 @@ for i in range(0,days):
 
     #Send alert to Slack, when duty is missing
     if(msg != ""):
-        web_hook_url = "https://hooks.slack.com/services/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"
+        web_hook_url = ""
 
         slack_msg = {'text':msg}
 
